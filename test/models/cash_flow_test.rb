@@ -53,4 +53,8 @@ class CashFlowTest < ActiveSupport::TestCase
     total = cash_flow.total_adjustments
     assert_equal(1325, total)
   end
+
+  test 'it should generate income types' do
+    
+  end
 end

@@ -33,11 +33,30 @@
 #
 
 class CashFlow < ActiveRecord::Base
-  # belongs_to :appartment
+  belongs_to :appartment
   has_many :incomes
   has_many :expenses
   has_many :adjustments
 
+###########################################
+  def rent
+    Income.income_type('rent')
+  end
+
+  def garage_rent
+    Income.income_type('garage rent')
+  end
+
+  def laundry_income
+    Income.income_type('laundry income')
+  end
+
+  def late_fee
+    Income.income_type('late_fee')
+  end
+
+
+############################################
   def total_income
     incomes.map(&:value).reduce(&:+)
   end

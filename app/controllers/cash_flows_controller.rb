@@ -13,7 +13,7 @@ class CashFlowsController < ApplicationController
     respond_to do |format|
       format.html
       format.json { render json: @cash_flow }
-    end  
+    end
   end
 
   def new
