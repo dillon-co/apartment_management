@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  name: "Yacht"
+  value: 1234
+  cash_flow_id: 1
+  # column: value
+
+another:
+  name: "Eccentrica Galombutz"
+  value: 123
+  cash_flow_id: 1

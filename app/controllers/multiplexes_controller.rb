@@ -1,0 +1,2 @@
+class MultiplexesController < ApplicationController
+end

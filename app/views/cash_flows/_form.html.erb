@@ -1,0 +1,113 @@
+<%= form_for(@cash_flow) do |f| %>
+  <% if @cash_flow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cash_flow.errors.count, "error") %> prohibited this cash_flow from being saved:</h2>
+
+      <ul>
+      <% @cash_flow.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="md-padding" layout="row">
+<div flex="30"><md-input-container >
+  <%= f.label :rent %>
+  <%= f.text_field :rent %>
+</md-input-container></div>
+
+<div flex="30"><md-input-container >
+  <%= f.label :garage_rent %>
+  <%= f.text_field :garage_rent %>
+</md-input-container></div>
+
+<div flex="30"><md-input-container >
+  <%= f.label :laundry_income %>
+    <%= f.text_field :laundry_income %>
+</md-input-container></div>
+</div>
+<div class="md-padding" layout="row">
+<div flex="30"><md-input-container >
+  <%= f.label :late_fee %>
+  <%= f.text_field :late_fee %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :gardening %>
+  <%= f.text_field :gardening %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :insurance %>
+  <%= f.text_field :insurance %>
+</md-input-container></div>
+</div>
+<div class="md-padding" layout="row">
+<div flex="30"><md-input-container >
+  <%= f.label :maintenance %>
+  <%= f.text_field :maintenance %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :off_site_management_exp %>
+  <%= f.text_field :off_site_management_exp %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :postage_and_delivery %>
+  <%= f.text_field :postage_and_delivery %>
+</md-input-container></div>
+</div>
+<div class="md-padding" layout="row">
+<div flex="30"><md-input-container >
+  <%= f.label :painting %>
+  <%= f.text_field :painting %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :building_supplies %>
+  <%= f.text_field :building_supplies %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :taxes_and_licenses %>
+  <%= f.text_field :taxes_and_licenses %>
+</md-input-container></div>
+</div>
+<div class="md-padding" layout="row">
+<div flex="30"><md-input-container >
+  <%= f.label :trash %>
+  <%= f.text_field :trash %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :telephone_expense %>
+  <%= f.text_field :telephone_expense %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :utilities_expense %>
+  <%= f.text_field :utilities_expense %>
+</md-input-container></div>
+</div>
+<div class="md-padding" layout="row">
+
+<div flex="30"><md-input-container >
+  <%= f.label :water_and_sewage %>
+  <%= f.text_field :water_and_sewage %>
+</md-input-container></div>
+
+<div flex="30"><md-input-container >
+  <%= f.label :tenant_deposit %>
+  <%= f.text_field :tenant_deposit %>
+</md-input-container></div>
+<div flex="30"><md-input-container >
+  <%= f.label :tennant_refund %>
+  <%= f.text_field :tennant_refund %>
+</md-input-container></div>
+</div>
+<div class="md-padding" layout="row">
+<div flex="30"><md-input-container >
+  <%= f.label  :owner_draw %>
+  <%= f.text_field  :owner_draw %>
+</md-input-container></div>
+
+
+</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

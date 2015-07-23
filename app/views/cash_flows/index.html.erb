@@ -1,0 +1,13 @@
+<div ng-controller="CashFlowsCtrl">
+
+<h1>Listing Cash Flows</h1>
+<div ng-repeat="cashFlow in cashFlows">
+  <h3>Total Income</h3>
+    $ {{cashFlow.total_income}}
+  <h3>Total Expense</h3>
+    $ {{cashFlow.total_expense}}
+<md-divider></md-divider>
+</div>
+
+<%= link_to 'New Cash flow', new_cash_flow_path %>
+</div>
