@@ -9,7 +9,7 @@ class Income < ActiveRecord::Base
   #   income.create(name: 'late_fee')
   # end
 
-  def self.income_type(type)
-      new name: type
+  def self.income_type(name)
+      new name: name
   end
 end

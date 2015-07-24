@@ -54,7 +54,15 @@ class CashFlowTest < ActiveSupport::TestCase
     assert_equal(1325, total)
   end
 
-  test 'it should generate income types' do
-    
+  test 'it should generate rent income type' do
+    cash_flow = CashFlow.find(1)
+    rent = cash_flow.rent
+    assert_match('rent', rent.name)
+  end
+
+  test 'it should generate garage rent income type' do
+    cash_flow = CashFlow.find(1)
+    rent = cash_flow.garage_rent
+    assert_match('rent', rent.name)
   end
 end

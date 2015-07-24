@@ -9,7 +9,7 @@
 
 ActiveRecord::Base.transaction do
   cash_flow = CashFlow.create!
-  cash_flow.incomes.create! name: 'rent', value: 123
+  cash_flow.incomes.create! name: 'rent', value: 1331012902
   cash_flow.incomes.create! name: 'parking', value: 123112
 
 

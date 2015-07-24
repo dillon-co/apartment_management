@@ -18,11 +18,11 @@ class CashFlowsController < ApplicationController
 
   def new
     @cash_flow = CashFlow.new
-    # @full_params = cash_flow_full_params
   end
 
   def create
     @cash_flow = CashFlow.new(cash_flow_params)
+    # binding.remote_pry
     if @cash_flow.save
       redirect_to cash_flows_path
     else
@@ -34,11 +34,7 @@ class CashFlowsController < ApplicationController
 
   def cash_flow_params
     params.require(:cash_flow).permit(
-                                      :income,
-                                      :rent,
-                                      :garage_rent,
-                                      :laundry_income,
-                                      :late_fee,
+                                      incomes_attributes: [:id, :rent, :garage_rent, :laundry_income, :late_fee, :_destroy],
                                       :total_income,
                                       :gardening,
                                       :insurance,

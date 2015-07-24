@@ -2,10 +2,10 @@
 
 <h1>Total Cash Flow</h1>
 <div ng-repeat="cashFlow in cashFlows">
-  <h3>Total Income</h3>
-    $ {{cashFlow.total_income}}
+  <h3>Your Total Income</h3>
+    $ {{cashFlow.total_income | number}}
   <h3>Total Expense</h3>
-    $ {{cashFlow.total_expense}}
+    $ {{cashFlow.total_expense | number}}
 <md-divider></md-divider>
 </div>
 
