@@ -27,6 +27,10 @@
     });
   }]);
 
+  base.controller('NewCashFlowCtrl', ['$scope', function($scope){
+    $scope.incomes = [{}];
+  }]);
+
   base.controller('CashFlowsCtrl', ['$scope', 'CashFlow', function($scope, CashFlow) {
     var cash = CashFlow.all();
     cash.then(function(cashFlows){
@@ -48,6 +52,8 @@
       }
     };
   }]);
+
+
 
 
   angular.bootstrap(document.body, ['selectDemoBasic']);

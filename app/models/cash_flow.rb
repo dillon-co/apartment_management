@@ -32,7 +32,7 @@ class CashFlow < ActiveRecord::Base
   accepts_nested_attributes_for :incomes, :allow_destroy => true
 # ############### This Gets The Test To Pass But my View doesn't work. ###########################
 #
-#   def rent=(valu
+#   def rent=(value)
 #     super(Income.income_type('rent'))
 #   end
 #

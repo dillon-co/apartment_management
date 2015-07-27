@@ -1,45 +1,19 @@
-<%= form_for(@cash_flow) do |f| %>
-  <% if @cash_flow.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cash_flow.errors.count, "error") %> prohibited this cash_flow from being saved:</h2>
-
-      <ul>
-      <% @cash_flow.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<form ng-controller="NewCashFlowCtrl" action="<%= cash_flows_path %>" method="post">
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token">
+  <div class="md-padding" layout="row" ng-repeat="income in incomes">
+    <div flex="30">
+      <md-input-container>
+        <input type="text" ng-model="income.name" placeholder="income type" name="cash_flow[incomes_attributes][][name]">
+      </md-input-container>
     </div>
-  <% end %>
-  <% end %>
-<% form_for(@income) do |f| %>
-<div class="md-padding" layout="row">
-<%#= f.fields_for :incomes do |income| %>
-<div flex="30"><md-input-container >
-  <%= f.label :rent %>
-  <%= f.text_field :rent %>
-</md-input-container></div>
-
-<div flex="30"><md-input-container >
-  <%= f.label :garage_rent %>
-  <%= f.text_field :garage_rent %>
-</md-input-container></div>
-
-<div flex="30"><md-input-container >
-  <%= f.label :laundry_income %>
-    <%= f.text_field :laundry_income %>
-</md-input-container></div>
-</div>
-<div class="md-padding" layout="row">
-<div flex="30"><md-input-container >
-  <%= f.label :late_fee %>
-  <%= f.text_field :late_fee %>
-</md-input-container></div>
-
-<%# end %>
-
-</div>
+    <div flex="30">
+      <md-input-container>
+        <input type="number" ng-model="income.value" placeholder="amount" name="cash_flow[incomes_attributes][][value]">
+      </md-input-container>
+    </div>
+  </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <input type="submit" value="create cash flow">
   </div>
-<% end %>
+</form>
