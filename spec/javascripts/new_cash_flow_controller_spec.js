@@ -10,12 +10,3 @@ describe('NewCashFlowCtrl', function() {
     expect(scopeObj.incomes).toEqual([{}]);
   });
 });
-
-describe('CashFlowCtrl', function(){
-  var scopeObj;
-  var cashFlowObj;
-  beforeEach(module('selectDemoBasic'));
-  beforeEach(inject(function(){
-
-  }));
-});
