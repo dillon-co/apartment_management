@@ -22,6 +22,7 @@ gem 'annotate', '~> 2.6.10'
 source 'https://rails-assets.org' do
   gem 'rails-assets-angular'
   gem 'rails-assets-angular-material'
+  gem 'rails-assets-angular-mocks'
 end
 
 
