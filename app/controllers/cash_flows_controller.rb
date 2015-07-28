@@ -23,7 +23,6 @@ class CashFlowsController < ApplicationController
   def create
     @cash_flow = CashFlow.new(cash_flow_params)
     if @cash_flow.save
-      binding.pry
       redirect_to cash_flows_path
     else
       render 'new'

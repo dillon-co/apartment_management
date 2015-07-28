@@ -15,13 +15,13 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
 gem 'omniauth-venmo'
-gem "better_errors"
+# gem "better_errors"
 gem 'puma'
 gem 'active_model_serializers'
 gem 'annotate', '~> 2.6.10'
-gem 'rails-angular-material', '~> 0.8.3.2'
 source 'https://rails-assets.org' do
   gem 'rails-assets-angular'
+  gem 'rails-assets-angular-material'
 end
 
 
